@@ -11,6 +11,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
+ *  博客文档：https://blog.csdn.net/u011624903/article/details/100829228
+ */
+
+/**
  * SpringSecurity需要的用户详情
  * Created by macro on 2018/4/26.
  */
