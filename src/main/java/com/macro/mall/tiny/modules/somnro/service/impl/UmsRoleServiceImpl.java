@@ -1,8 +1,8 @@
-package com.macro.mall.tiny.modules.com.somnro.service.impl;
+package com.macro.mall.tiny.modules.somnro.service.impl;
 
-import com.macro.mall.tiny.modules.com.somnro.model.UmsRole;
-import com.macro.mall.tiny.modules.com.somnro.mapper.UmsRoleMapper;
-import com.macro.mall.tiny.modules.com.somnro.service.UmsRoleService;
+import com.macro.mall.tiny.modules.somnro.model.UmsRole;
+import com.macro.mall.tiny.modules.somnro.mapper.UmsRoleMapper;
+import com.macro.mall.tiny.modules.somnro.service.UmsRoleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

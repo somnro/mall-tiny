@@ -1,6 +1,6 @@
-package com.macro.mall.tiny.modules.com.somnro.mapper;
+package com.macro.mall.tiny.modules.somnro.mapper;
 
-import com.macro.mall.tiny.modules.com.somnro.model.UmsRole;
+import com.macro.mall.tiny.modules.somnro.model.UmsRole;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

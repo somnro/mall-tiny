@@ -1,6 +1,6 @@
-package com.macro.mall.tiny.modules.com.somnro.service;
+package com.macro.mall.tiny.modules.somnro.service;
 
-import com.macro.mall.tiny.modules.com.somnro.model.UmsRole;
+import com.macro.mall.tiny.modules.somnro.model.UmsRole;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

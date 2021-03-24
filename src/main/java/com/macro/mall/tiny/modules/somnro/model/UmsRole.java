@@ -1,4 +1,4 @@
-package com.macro.mall.tiny.modules.com.somnro.model;
+package com.macro.mall.tiny.modules.somnro.model;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;

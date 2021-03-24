@@ -1,4 +1,4 @@
-package com.macro.mall.tiny.modules.com.somnro.controller;
+package com.macro.mall.tiny.modules.somnro.controller;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2021-03-24
  */
 @RestController
-@RequestMapping("/com.somnro/umsRole")
+@RequestMapping("/somnro/umsRole")
 public class UmsRoleController {
 
 }

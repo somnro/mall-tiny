@@ -26,9 +26,9 @@ public class MyBatisPlusGenerator {
     /**
      * 1.数据库正常连接，配置文件 generator.properties
      * 2.运行该类
-     * 3.输入模块名  com.somnro
+     * 3.输入模块名  somnro
      * 4.输入表名   ums_role
-     * 5.生成了com.somnro.UmsRoleMapper.xml com.macro.mall.tiny.modules.com.somnro包
+     * 5.生成了 somnro.UmsRoleMapper.xml com.macro.mall.tiny.modules.somnro包
      */
     public static void main(String[] args) {
         String projectPath = System.getProperty("user.dir");
