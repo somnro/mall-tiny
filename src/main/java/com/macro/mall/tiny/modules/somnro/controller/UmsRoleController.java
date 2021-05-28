@@ -1,21 +1,21 @@
-package com.macro.mall.tiny.modules.somnro.controller;
-
-
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
-
-/**
- * <p>
- * 后台用户角色表 前端控制器
- * </p>
- *
- * @author macro
- * @since 2021-03-24
- */
-@RestController
-@RequestMapping("/somnro/umsRole")
-public class UmsRoleController {
-
-}
-
+//package com.macro.mall.tiny.modules.somnro.controller;
+//
+//
+//import org.springframework.web.bind.annotation.RequestMapping;
+//
+//import org.springframework.web.bind.annotation.RestController;
+//
+///**
+// * <p>
+// * 后台用户角色表 前端控制器
+// * </p>
+// *
+// * @author macro
+// * @since 2021-03-24
+// */
+//@RestController
+//@RequestMapping("/somnro/umsRole")
+//public class UmsRoleController {
+//
+//}
+//
