@@ -11,6 +11,11 @@
 
 mall-tiny是一款基于SpringBoot+MyBatis-Plus的快速开发脚手架，拥有完整的权限管理功能，可对接Vue前端，开箱即用。
 
+## 实践
+Bean Searcher 查询实践。 
+
+
+
 ## 项目演示
 
 mall-tiny项目可无缝对接`mall-admin-web`前端项目，秒变权限管理系统。前端项目地址：https://github.com/macrozheng/mall-admin-web
