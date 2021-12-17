@@ -142,6 +142,12 @@
             <artifactId>velocity-engine-core</artifactId>
             <version>${velocity.version}</version>
         </dependency>
+       <!--Bean Searcher -->
+        <dependency>
+            <groupId>com.ejlchina</groupId>
+            <artifactId>bean-searcher-boot-starter</artifactId>
+            <version>3.1.2</version>
+        </dependency>
     </dependencies>
 
     <build>
