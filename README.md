@@ -26,17 +26,18 @@ mall-tiny项目可无缝对接`mall-admin-web`前端项目，秒变权限管理�
 
 | 技术                   | 版本    | 说明             |
 | ---------------------- | ------- | ---------------- |
-| SpringBoot             | 2.3.0   | 容器+MVC框架     |
-| SpringSecurity         | 5.3.2   | 认证和授权框架   |
-| MyBatis                | 3.5.4   | ORM框架          |
-| MyBatis-Plus           | 3.3.2   | MyBatis增强工具  |
-| MyBatis-Plus Generator | 3.3.2   | 数据层代码生成器 |
-| Swagger-UI             | 2.9.2   | 文档生产工具     |
+| SpringBoot             | 2.7.0   | 容器+MVC框架     |
+| SpringSecurity         | 5.7.1   | 认证和授权框架   |
+| MyBatis                | 3.5.9   | ORM框架          |
+| MyBatis-Plus           | 3.5.1   | MyBatis增强工具  |
+| MyBatis-Plus Generator | 3.5.1   | 数据层代码生成器 |
+| Swagger-UI             | 3.0.0   | 文档生产工具     |
 | Redis                  | 5.0     | 分布式缓存       |
 | Docker                 | 18.09.0 | 应用容器引擎     |
-| Druid                  | 1.1.10  | 数据库连接池     |
-| JWT                    | 0.9.0   | JWT登录支持      |
-| Lombok                 | 1.18.12 | 简化对象封装工具 |
+| Druid                  | 1.2.9   | 数据库连接池     |
+| Hutool                 | 5.8.0   | Java工具类库     |
+| JWT                    | 0.9.1   | JWT登录支持      |
+| Lombok                 | 1.18.24 | 简化对象封装工具 |
 
 ## 数据库表结构
 
@@ -50,7 +51,7 @@ mall-tiny项目可无缝对接`mall-admin-web`前端项目，秒变权限管理�
 
 ### 环境搭建
 
-简化依赖服务，只需安装最常用的MySql和Redis服务即可，服务安装具体参考[mall在Windows环境下的部署](https://mp.weixin.qq.com/s/Q9ybpfq8IEdbZmvlaMXJdg)，数据库中需要导入`mall_tiny.sql`脚本。
+简化依赖服务，只需安装最常用的MySql和Redis服务即可，服务安装具体参考[mall在Windows环境下的部署](https://www.macrozheng.com/mall/deploy/mall_deploy_windows.html) ，数据库中需要导入`mall_tiny.sql`脚本。
 
 ### 开发规约
 
@@ -105,7 +106,7 @@ resources
 
 - 获取指定记录详情：GET /{控制器路由名称}/{id}
 
-- 具体参数及返回结果定义可以运行代码查看Swagger-UI的Api文档：http://localhost:8080/swagger-ui.html
+- 具体参数及返回结果定义可以运行代码查看Swagger-UI的Api文档：http://localhost:8080/swagger-ui/
 
 ![](http://img.macrozheng.com/mall/project/mall_tiny_start_02.png)
 
@@ -277,7 +278,19 @@ public interface UmsMenuMapper extends BaseMapper<UmsMenu> {
 
 ### 项目部署
 
-mall-tiny已经集成了Docker插件，可以打包成Docker镜像来部署，具体参考：[使用Maven插件为SpringBoot应用构建Docker镜像](https://mp.weixin.qq.com/s/q2KDzHbPkf3Q0EY8qYjYgw)
+mall-tiny已经集成了Docker插件，可以打包成Docker镜像来部署，具体参考：[使用Maven插件为SpringBoot应用构建Docker镜像](https://www.macrozheng.com/project/maven_docker_fabric8.html)
+
+安装好MySQL和Redis服务后，直接使用如下命令运行即可。
+
+```bash
+docker run -p 8080:8080 --name mall-tiny \
+--link mysql:db \
+--link redis:redis \
+-e 'spring.profiles.active'=prod \
+-v /etc/localtime:/etc/localtime \
+-v /mydata/app/mall-tiny/logs:/var/logs \
+-d mall-tiny/mall-tiny:1.0.0-SNAPSHOT
+```
 
 ### 其他说明
 
@@ -285,7 +298,7 @@ mall-tiny已经集成了Docker插件，可以打包成Docker镜像来部署，�
 
 > 由于使用了SpringSecurity来实现认证和授权，部分接口需要token才可以访问，访问需要认证授权接口流程如下。
 
-- 访问Swagger-UI接口文档：http://localhost:8080/swagger-ui.html
+- 访问Swagger-UI接口文档：http://localhost:8080/swagger-ui/
 
 - 调用登录接口获取token；
 
@@ -358,4 +371,4 @@ public class UmsAdminController {
 
 [Apache License 2.0](https://github.com/macrozheng/mall-tiny/blob/master/LICENSE)
 
-Copyright (c) 2018-2021 macrozheng
+Copyright (c) 2018-2022 macrozheng
